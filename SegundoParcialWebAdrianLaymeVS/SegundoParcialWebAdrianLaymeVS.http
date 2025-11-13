@@ -1,0 +1,6 @@
+@SegundoParcialWebAdrianLaymeVS_HostAddress = http://localhost:5135
+
+GET {{SegundoParcialWebAdrianLaymeVS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
