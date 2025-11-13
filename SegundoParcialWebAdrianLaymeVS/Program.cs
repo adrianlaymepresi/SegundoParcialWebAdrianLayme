@@ -1,4 +1,21 @@
+///////////////////////////////////////////////
+// USINGS
+using Microsoft.EntityFrameworkCore;
+using SegundoParcialWebAdrianLaymeVS.Data;
+// using SegundoParcialWebAdrianLaymeVS.Services;
+///////////////////////////////////////////////
+
 var builder = WebApplication.CreateBuilder(args);
+
+///////////////////////////////////////////////
+// NUEVO: AGREGAMOS CADENA DE CONEXION Y CONTEXTO
+builder.Services.AddDbContext<AppDbContext>(
+    options => options.UseInMemoryDatabase("VentasDB"));
+
+// REGISTRAMOS LOS SERVICIOS A USAR
+
+
+///////////////////////////////////////////////
 
 // Add services to the container.
 
