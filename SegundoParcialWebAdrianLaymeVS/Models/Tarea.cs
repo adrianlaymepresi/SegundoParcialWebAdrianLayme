@@ -14,7 +14,7 @@ namespace SegundoParcialWebAdrianLaymeVS.Models
         public DateTime FechaCreacion { get; set; } = DateTime.Now;
 
         [Required, MaxLength(50)] // Ejemplos: ToDo, InProgress, Done
-        public string Estado { get; set; } = string.Empty;
+        public string Estado { get; set; } = "ToDo";
 
         [Required]
         public int ResponsableId { get; set; }

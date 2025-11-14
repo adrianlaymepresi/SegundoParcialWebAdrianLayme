@@ -17,6 +17,7 @@ builder.Services.AddDbContext<AppDbContext>(
 builder.Services.AddScoped<RolService>();
 builder.Services.AddScoped<MiemrboService>();
 builder.Services.AddScoped<PrioridadService>();
+builder.Services.AddScoped<TareaService>();
 
 ///////////////////////////////////////////////
 
