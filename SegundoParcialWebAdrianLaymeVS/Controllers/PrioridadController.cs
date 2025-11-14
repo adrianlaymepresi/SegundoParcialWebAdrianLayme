@@ -6,22 +6,22 @@ namespace SegundoParcialWebAdrianLaymeVS.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class MiembroController : ControllerBase
+    public class PrioridadController : ControllerBase
     {
-        private readonly MiemrboService _service;
+        private readonly PrioridadService _service;
 
-        public MiembroController(MiemrboService service)
+        public PrioridadController(PrioridadService service)
         {
             _service = service;
         }
 
-        [HttpGet("obtenerMiembros")]
+        [HttpGet("obtenerPrioridades")]
         public async Task<IActionResult> Obtener()
         {
             try
             {
-                var miembros = await _service.ObtenerTodosAsync();
-                return Ok(miembros);
+                var prioridades = await _service.ObtenerTodosAsync();
+                return Ok(prioridades);
             }
             catch (Exception ex)
             {
@@ -29,13 +29,13 @@ namespace SegundoParcialWebAdrianLaymeVS.Controllers
             }
         }
 
-        [HttpPost("registrarMiembro")]
-        public async Task<IActionResult> Registrar(RegistrarMiembroDto dto)
+        [HttpPost("registrarPrioridad")]
+        public async Task<IActionResult> Registrar(RegistrarPrioridadDto dto)
         {
             try
             {
-                var miembro = await _service.RegistrarAsync(dto);
-                return Ok(new { mensaje = "Miembro registrado", miembro });
+                var prioridad = await _service.RegistrarAsync(dto);
+                return Ok(new { mensaje = "Prioridad registrado", prioridad });
             }
             catch (Exception ex)
             {

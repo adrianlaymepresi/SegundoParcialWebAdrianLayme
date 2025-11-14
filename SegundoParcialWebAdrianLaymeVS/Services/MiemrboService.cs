@@ -21,7 +21,7 @@ namespace SegundoParcialWebAdrianLaymeVS.Services
         public async Task<Miembro> RegistrarAsync(RegistrarMiembroDto dto)
         {
             if (await _context.Miembros.AnyAsync(r => r.CarnetIdentidad == dto.CarnetIdentidad))
-                throw new Exception("El nombre del rol ya existe");
+                throw new Exception("El carnet del miembro ya existe");
 
             var miembro = new Miembro
             {

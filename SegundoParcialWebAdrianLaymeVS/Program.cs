@@ -16,6 +16,7 @@ builder.Services.AddDbContext<AppDbContext>(
 // REGISTRAMOS LOS SERVICIOS A USAR
 builder.Services.AddScoped<RolService>();
 builder.Services.AddScoped<MiemrboService>();
+builder.Services.AddScoped<PrioridadService>();
 
 ///////////////////////////////////////////////
 
