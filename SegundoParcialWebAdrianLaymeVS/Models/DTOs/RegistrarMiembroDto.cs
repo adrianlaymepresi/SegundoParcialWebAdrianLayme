@@ -1,11 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SegundoParcialWebAdrianLaymeVS.Models
+namespace SegundoParcialWebAdrianLaymeVS.Models.DTOs
 {
-    public class Miembro
+    public class RegistrarMiembroDto
     {
-        public int Id { get; set; }
-
         [Required]
         public int CarnetIdentidad { get; set; }
 
@@ -17,7 +15,5 @@ namespace SegundoParcialWebAdrianLaymeVS.Models
 
         [Required]
         public int RolId { get; set; }
-
-        public List<Tarea> Tareas { get; set; } = new List<Tarea>();
     }
 }

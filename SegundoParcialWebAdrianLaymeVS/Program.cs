@@ -2,6 +2,7 @@
 // USINGS
 using Microsoft.EntityFrameworkCore;
 using SegundoParcialWebAdrianLaymeVS.Data;
+using SegundoParcialWebAdrianLaymeVS.Services;
 // using SegundoParcialWebAdrianLaymeVS.Services;
 ///////////////////////////////////////////////
 
@@ -13,7 +14,8 @@ builder.Services.AddDbContext<AppDbContext>(
     options => options.UseInMemoryDatabase("VentasDB"));
 
 // REGISTRAMOS LOS SERVICIOS A USAR
-
+builder.Services.AddScoped<RolService>();
+builder.Services.AddScoped<MiemrboService>();
 
 ///////////////////////////////////////////////
 
